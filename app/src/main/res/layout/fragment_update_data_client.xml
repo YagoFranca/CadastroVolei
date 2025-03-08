@@ -1,0 +1,460 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/fragment_update_data_client"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="30dp"
+            android:paddingBottom="30dp">
+
+            <TextView
+                android:id="@+id/title_add"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="Atualização de Cliente"
+                android:textAlignment="center"
+                android:textColor="@color/yellow"
+                android:textSize="25sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/txt_title_ind"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:text="Quem indicou?"
+                android:textColor="@color/text_color_contrast"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@+id/field_ind"
+                app:layout_constraintTop_toBottomOf="@+id/title_add" />
+
+            <EditText
+                android:id="@+id/field_ind"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/style_edittext"
+                android:inputType="text"
+                android:paddingHorizontal="10dp"
+                android:textColor="#303030"
+                android:textStyle="italic"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txt_title_ind" />
+
+            <TextView
+                android:id="@+id/txt_title_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="Nome do cliente"
+                android:textColor="@color/text_color_contrast"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@+id/field_name"
+                app:layout_constraintTop_toBottomOf="@+id/field_ind" />
+
+            <EditText
+                android:id="@+id/field_name"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/style_edittext"
+                android:inputType="text"
+                android:maxLength="15"
+                android:paddingHorizontal="10dp"
+                android:textColor="#303030"
+                android:textStyle="italic"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txt_title_name" />
+
+            <TextView
+                android:id="@+id/txt_title_number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="Contato"
+                android:textColor="@color/text_color_contrast"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@+id/field_number"
+                app:layout_constraintTop_toBottomOf="@+id/field_name" />
+
+            <EditText
+                android:id="@+id/field_number"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/style_edittext"
+                android:ems="10"
+                android:inputType="number"
+                android:paddingHorizontal="10dp"
+                android:textColor="#303030"
+                android:textStyle="italic"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txt_title_number" />
+
+            <TextView
+                android:id="@+id/txt_title_platform"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="Plataforma"
+                android:textColor="@color/text_color_contrast"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@+id/field_platform"
+                app:layout_constraintTop_toBottomOf="@+id/field_number" />
+
+            <EditText
+                android:id="@+id/field_platform"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/style_edittext"
+                android:ems="10"
+                android:inputType="text"
+                android:paddingHorizontal="10dp"
+                android:textColor="#303030"
+                android:textStyle="italic"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txt_title_platform" />
+
+            <TextView
+                android:id="@+id/txt_title_user"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="Usuário da Plataforma"
+                android:textColor="@color/text_color_contrast"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@+id/field_user"
+                app:layout_constraintTop_toBottomOf="@+id/field_platform" />
+
+            <EditText
+                android:id="@+id/field_user"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/style_edittext"
+                android:ems="10"
+                android:inputType="text"
+                android:paddingHorizontal="10dp"
+                android:textColor="#303030"
+                android:textStyle="italic"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txt_title_user" />
+
+            <TextView
+                android:id="@+id/txt_title_password"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="Senha da Plataforma"
+                android:textColor="@color/text_color_contrast"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@+id/field_password"
+                app:layout_constraintTop_toBottomOf="@+id/field_user" />
+
+            <EditText
+                android:id="@+id/field_password"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/style_edittext"
+                android:ems="10"
+                android:inputType="text"
+                android:paddingHorizontal="10dp"
+                android:textColor="#303030"
+                android:textStyle="italic"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txt_title_password" />
+
+            <Switch
+                android:id="@+id/switch_adult"
+                android:layout_width="110dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="Adulto?"
+                android:textColor="@color/text_color_contrast"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@+id/txt_title_tv"
+                app:layout_constraintTop_toBottomOf="@+id/field_password"
+                tools:ignore="UseSwitchCompatOrMaterialXml" />
+
+            <TextView
+                android:id="@+id/txt_title_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="Marca da TV"
+                android:textColor="@color/text_color_contrast"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@+id/field_tv"
+                app:layout_constraintTop_toBottomOf="@+id/switch_adult" />
+
+            <EditText
+                android:id="@+id/field_tv"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/style_edittext"
+                android:ems="10"
+                android:importantForAutofill="no"
+                android:inputType="text"
+                android:paddingHorizontal="10dp"
+                android:textColor="#303030"
+                android:textStyle="italic"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txt_title_tv" />
+
+            <TextView
+                android:id="@+id/txt_title_player"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="Player"
+                android:textColor="@color/text_color_contrast"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@+id/field_player"
+                app:layout_constraintTop_toBottomOf="@+id/field_tv" />
+
+            <EditText
+                android:id="@+id/field_player"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/style_edittext"
+                android:ems="10"
+                android:inputType="text"
+                android:paddingHorizontal="10dp"
+                android:textColor="#303030"
+                android:textStyle="italic"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txt_title_player" />
+
+            <TextView
+                android:id="@+id/txt_title_mac_player"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="Mac Player"
+                android:textColor="@color/text_color_contrast"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@+id/field_mac_player"
+                app:layout_constraintTop_toBottomOf="@+id/field_player" />
+
+            <EditText
+                android:id="@+id/field_mac_player"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/style_edittext"
+                android:ems="10"
+                android:inputType="text"
+                android:paddingHorizontal="10dp"
+                android:textColor="#303030"
+                android:textStyle="italic"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txt_title_mac_player" />
+
+            <TextView
+                android:id="@+id/txt_title_key_player"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="Key Player"
+                android:textColor="@color/text_color_contrast"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@+id/field_mac_player"
+                app:layout_constraintTop_toBottomOf="@+id/field_mac_player" />
+
+            <EditText
+                android:id="@+id/field_key_player"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/style_edittext"
+                android:ems="10"
+                android:inputType="text"
+                android:paddingHorizontal="10dp"
+                android:textColor="#303030"
+                android:textStyle="italic"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txt_title_key_player" />
+
+            <Switch
+                android:id="@+id/switch_status"
+                android:layout_width="110dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="Ativo?"
+                android:textColor="@color/text_color_contrast"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@+id/txt_title_habitation_date"
+                app:layout_constraintTop_toBottomOf="@+id/field_key_player"
+                tools:ignore="UseSwitchCompatOrMaterialXml" />
+
+            <TextView
+                android:id="@+id/txt_title_habitation_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="Data de habitação"
+                android:textColor="@color/text_color_contrast"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@+id/field_habitation_date"
+                app:layout_constraintTop_toBottomOf="@+id/switch_status" />
+
+            <TextView
+                android:id="@+id/field_habitation_date"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/style_edittext"
+                android:paddingHorizontal="10dp"
+                android:paddingTop="12dp"
+                android:textColor="#303030"
+                android:textSize="18sp"
+                android:textStyle="italic"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txt_title_habitation_date" />
+
+            <TextView
+                android:id="@+id/txt_title_renewal_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="Data de renovação"
+                android:textColor="@color/text_color_contrast"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@+id/field_renewal_date"
+                app:layout_constraintTop_toBottomOf="@+id/field_habitation_date" />
+
+            <TextView
+                android:id="@+id/field_renewal_date"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/style_edittext"
+                android:paddingHorizontal="10dp"
+                android:paddingTop="12dp"
+                android:textColor="#303030"
+                android:textSize="18sp"
+                android:textStyle="italic"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txt_title_renewal_date" />
+
+            <TextView
+                android:id="@+id/txt_title_pay_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="Dia do pagamento"
+                android:textColor="@color/text_color_contrast"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@+id/field_pay_date"
+                app:layout_constraintTop_toBottomOf="@+id/field_renewal_date" />
+
+            <TextView
+                android:id="@+id/field_pay_date"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/style_edittext"
+                android:paddingHorizontal="10dp"
+                android:paddingTop="12dp"
+                android:textColor="#303030"
+                android:textSize="18sp"
+                android:textStyle="italic"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txt_title_pay_date" />
+
+            <TextView
+                android:id="@+id/txt_title_bank"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:text="Banco onde recebeu"
+                android:textColor="@color/text_color_contrast"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@+id/field_bank"
+                app:layout_constraintTop_toBottomOf="@+id/field_pay_date" />
+
+            <EditText
+                android:id="@+id/field_bank"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/style_edittext"
+                android:paddingHorizontal="10dp"
+                android:textColor="#303030"
+                android:textStyle="italic"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txt_title_bank" />
+
+            <TextView
+                android:id="@+id/txt_title_amount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:text="Valor do Plano"
+                android:textColor="@color/text_color_contrast"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@+id/field_amount"
+                app:layout_constraintTop_toBottomOf="@+id/field_bank" />
+
+            <EditText
+                android:id="@+id/field_amount"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/style_edittext"
+                android:inputType="number"
+                android:paddingHorizontal="10dp"
+                android:textColor="#303030"
+                android:textStyle="italic"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txt_title_amount" />
+
+            <ImageView
+                android:id="@+id/btn_delete"
+                android:layout_width="70dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="25dp"
+                android:clickable="true"
+                android:src="@drawable/img_delete"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/field_amount" />
+
+            <Button
+                android:id="@+id/btn_update"
+                android:layout_width="220dp"
+                android:layout_height="60dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/border_to_cards"
+                android:text="Atualizar os dados"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/btn_delete"
+                app:layout_constraintTop_toBottomOf="@+id/field_amount" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
